@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: db-configmap
+  name: mongodb-configmap
 data:
   # property-like keys; each key maps to a simple value
-  db-url: db-service
+  db-url: mongodb-service

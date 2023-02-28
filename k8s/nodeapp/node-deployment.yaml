@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: db-deployment
+  name: node-deployment
   labels:
-    app: db
+    app: node
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: db
+      app: node
   template:
     metadata:
       labels:
-        app: db
+        app: node
     spec:
       containers:
-        - name: db
-          image: mongo:5.0.15
+        - name: node
+          image: alperari/kubernetes-playground-node:3.0.0
           ports:
-            - containerPort: 27017
+            - containerPort: 3000

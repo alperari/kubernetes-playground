@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: db-service
+  name: node-service
 spec:
   selector:
-    app: db
+    app: node
   ports:
     - protocol: TCP
-      port: 1234
-      targetPort: 27017
+      port: 3000
+      targetPort: 3000
